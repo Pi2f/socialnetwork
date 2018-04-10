@@ -1,4 +1,4 @@
-package com.polytech.services;
+package services;
 
 public class Story {
     private String content;

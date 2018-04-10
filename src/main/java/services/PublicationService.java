@@ -1,8 +1,6 @@
-package com.polytech.services;
+package services;
 
 import persistence.StoryRepository;
-
-import java.util.List;
 
 public class PublicationService {
     StoryRepository stories;
@@ -12,6 +10,6 @@ public class PublicationService {
     }
 
     public void post(Story story){
-        stories.getStories().add(story);
+        stories.save(story);
     }
 }

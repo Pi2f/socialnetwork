@@ -1,8 +1,9 @@
 package persistence;
 
-import com.polytech.services.Story;
+import services.Story;
 import java.util.List;
 
 public interface StoryRepository {
-    List<Story> getStories();
+    List<Story> findAll();
+    void save(Story content);
 }

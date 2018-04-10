@@ -1,11 +1,9 @@
-package com.polytech.web;
+package web;
 
-import com.polytech.services.FeedService;
-import com.polytech.services.PublicationService;
-import com.polytech.services.Story;
+import services.FeedService;
+import services.PublicationService;
+import services.Story;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class FeedController {

@@ -1,4 +1,4 @@
-package com.polytech.services;
+package services;
 
 import persistence.StoryRepository;
 
@@ -11,6 +11,6 @@ public class FeedService {
     }
 
     public List<Story> feed(){
-        return stories.getStories();
+        return stories.findAll();
     }
 }
