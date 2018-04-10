@@ -2,9 +2,11 @@ import com.polytech.services.FeedService;
 import com.polytech.services.PublicationService;
 import com.polytech.services.Story;
 import com.polytech.web.FeedController;
+import config.AppConfig;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import persistence.MemoryStoryRepository;
 import persistence.StoryRepository;
 
@@ -16,12 +18,18 @@ import static org.junit.Assert.*;
 public class PublicationTest {
     private FeedController feedController;
 
-    @Before
+/*    @Before
     public void init_data(){
         StoryRepository stories = new MemoryStoryRepository();
         FeedService feedService = new FeedService(stories);
         PublicationService publicationService = new PublicationService(stories);
         feedController = new FeedController(feedService, publicationService);
+    }*/
+
+    @Before
+    public void init(){
+        AnnotationConfigApplicationContext container = new AnnotationConfigApplicationContext(AppConfig.class);
+        feedController = container.getBean(FeedController.class);
     }
 
     @Test
