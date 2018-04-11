@@ -1,16 +1,15 @@
-package config;
+package com.polytech.config;
 
-import services.FeedService;
-import services.PublicationService;
-import web.FeedController;
+import com.polytech.services.FeedService;
+import com.polytech.services.PublicationService;
+import com.polytech.web.FeedController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import persistence.JDBCStoryRepository;
-import persistence.StoryRepository;
+import com.polytech.persistence.JDBCStoryRepository;
+import com.polytech.persistence.StoryRepository;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
 import java.sql.SQLException;
 
 @Configuration
@@ -39,7 +38,7 @@ public class AppConfig {
     @Bean
     public DataSource dataSource(){
         return new EmbeddedDatabaseBuilder()
-                .addScripts("schema.sql")
+                //.addScripts("schema.sql")
                 .build();
     }
 }

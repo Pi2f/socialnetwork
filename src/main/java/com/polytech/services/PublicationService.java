@@ -1,6 +1,6 @@
-package services;
+package com.polytech.services;
 
-import persistence.StoryRepository;
+import com.polytech.persistence.StoryRepository;
 
 public class PublicationService {
     StoryRepository stories;
@@ -9,7 +9,7 @@ public class PublicationService {
         this.stories = stories;
     }
 
-    public void post(Story story){
+    public void share(Story story){
         stories.save(story);
     }
 }

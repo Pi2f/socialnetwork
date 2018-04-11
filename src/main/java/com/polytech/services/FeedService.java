@@ -1,16 +1,16 @@
-package services;
+package com.polytech.services;
 
-import persistence.StoryRepository;
+import com.polytech.persistence.StoryRepository;
 
 import java.util.List;
 
 public class FeedService {
-    StoryRepository stories;
+    private StoryRepository stories;
     public FeedService(StoryRepository stories) {
         this.stories = stories;
     }
 
-    public List<Story> feed(){
+    public List<Story> fetchAll(){
         return stories.findAll();
     }
 }
