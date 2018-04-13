@@ -45,8 +45,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="feed">Feed</a></li>
-                <li><a href="logout">Logout</a></li>
+                <li><a href="feed">Feed</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -54,26 +53,22 @@
 
 <div class="container">
     <div class="starter-template">
-        <form class="form-horizontal" action="/share" method="post" role="form">
-            <div class="form-group form-group-lg">
-                <div class="row">
-                    <label class="col-lg-1 control-label" for="">Post</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control " name="content" id="" placeholder="Publication..."> </input>
-                    </div>
-                    <button type="submit" class="btn-lg btn-primary">Publish</button>
-                </div>
+        <form action="/login" method="post" role="form">
+            <legend>Connection</legend>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
             </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" class="form-control" name="password" id="password" placeholder="Password"/>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
-        <div class="row">
-            <ul class="list-group col-md-12">
-                <li class="list-group-item" th:each="story: ${stories}">
-                    <span th:text="${story.content}"></span>
-                </li>
-            </ul>
-        </div>
     </div>
-</div><!--avaScript
+</div><!--- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

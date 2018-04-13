@@ -12,4 +12,5 @@ public class PublicationService {
     public void share(Story story){
         stories.save(story);
     }
+    
 }
