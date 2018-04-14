@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         String loginPage = "/login";
         http.authorizeRequests()
-                .mvcMatchers("/", loginPage).permitAll()
+                .mvcMatchers("/", loginPage,"register").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage(loginPage)
